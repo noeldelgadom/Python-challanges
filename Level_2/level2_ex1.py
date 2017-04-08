@@ -12,3 +12,7 @@ Hint:
 use 'list comprehension'
 
 """
+
+a = input('Enter sequence of comma separated 4 digit binary numbers:  ').split(',')
+print(', '.join([x for x in a if int(x, 2) % 5 == 0]))
+
