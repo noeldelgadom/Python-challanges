@@ -11,3 +11,17 @@ search isdigit & isalpha
 
 
 """
+
+a = input('Enter a sentence:    ')
+a = [character for character in a]
+
+letters, digits = 0, 0
+
+for character in a:
+    if character.isalpha():
+        letters += 1
+    elif character.isdigit():
+        digits += 1
+    
+print('     LETTERS        ', letters)
+print('     DIGITS         ', digits)
