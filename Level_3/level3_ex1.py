@@ -8,7 +8,8 @@ Following are the criteria for checking the password:
 3. At least 1 character from [$#@]
 4. Minimum length of transaction password: 6
 5. Maximum length of transaction password: 12
-Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. Passwords that match the criteria are to be printed, each separated by a comma.
+Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. 
+Passwords that match the criteria are to be printed, each separated by a comma.
 Example
 If the following passwords are given as input to the program:
 ABd1234@1,a F1#,2w3E*,2We3345
@@ -21,3 +22,13 @@ https://www.tutorialspoint.com/python/python_reg_expressions.htm
 
 """
 import re
+
+passwordList = input('Enter a sequence of comma separated passwords: ').split(',')
+
+# Password matching regular expression
+reg = '^(?=.*[a-z])(?=.*\d)(?=.*[A-Z])(?=.*[$#@]).{6,12}$'
+
+passwordList = [x for x in passwordList if re.search(reg, x) is not None]      # Filter for length
+
+passwordList = ', '.join(passwordList)
+print('Valid passwords are: ', passwordList)
