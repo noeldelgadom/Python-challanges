@@ -8,3 +8,13 @@ Then, the output of the program should be:
 [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]] 
 
 """
+
+X = 3
+Y = 5
+
+array = []
+for i in range(X):
+    array.append([])
+    for j in range(Y):
+        array[i].append(i*j)
+print(array)
