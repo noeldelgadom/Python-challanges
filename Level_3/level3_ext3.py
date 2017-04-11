@@ -22,6 +22,7 @@ for passwordCounter in range(T):
     # Cycle initialization
     original = loginAttempt
     output = ''
+    storedOutput = []
     sequence = []
     sequenceSize = 0
 
