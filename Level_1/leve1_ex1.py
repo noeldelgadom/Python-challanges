@@ -9,7 +9,10 @@ Consider use range(#begin, #end) method
 """
 
 def main():
-    pass
+    numbers = list(range(2000, 3201))
+    numbers = [str(x) for x in numbers if x%7 == 0 and not x%5 == 0]
+    numbers = ', '.join(numbers)
+    print(numbers)
 
 if __name__ == '__main__':
     main()
